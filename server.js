@@ -17,11 +17,14 @@ Glue.compose(Manifest, {relativeTo: __dirname}, (err, server) => {
     }
     server.start(() => {
         Logger.info('Server running at:', server.info.uri);
+        Logger.info('dbUrl.connectString:', dbUrl.connectString);
         mongoose.connection.openUri(dbUrl.connectString, function (err) {
             if(err) Logger.error("Can't connect to MongoDB !!!");
             else Logger.info("Connect MongoDB success !!!");
         });
     });
+
+    Logger.info('key:', AppConfig.jwt.secret);
     server.auth.strategy('jwt', 'jwt', {
         key: AppConfig.jwt.secret,
         verifyOptions: { algorithms: ['HS256'] }

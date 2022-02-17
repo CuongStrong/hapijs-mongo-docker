@@ -3,5 +3,5 @@
  */
 // docker run -itd -p 127.0.0.1:27017:27017 --name mongo-local  mongo
 module.exports = {
-    connectString : process.env.connectString || 'mongodb://mongo:27017/hapi-app'
+    connectString : process.env.connectString || 'mongodb://localhost:27017/hapi-app'//'mongodb://mongo:27017/hapi-app'
 }

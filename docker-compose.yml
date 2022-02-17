@@ -9,6 +9,6 @@ services:
     working_dir: /usr/src/app
     command: npm start
     ports:
-      - "1111:5001"
+      - "5001:1111"
     depends_on:
       - mongo

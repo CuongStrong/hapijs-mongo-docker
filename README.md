@@ -17,7 +17,7 @@ $ git clone https://lamtanphiho@bitbucket.org/lamtanphiho/hapijs-mongo-docker.gi
 ####2.  Make sure you have [npm](https://www.npmjs.org/) installed globally
 
 More details here
-https://nodejs.org/en/download/ 
+https://nodejs.org/download/release/v7.10.1/
 
 ####3. On the command prompt run the following commands
 
